@@ -14,7 +14,11 @@
   gtag('config', 'G-DRMPQPHFT0');
 </script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
+
 *{
   margin:0;
   padding:0;
@@ -28,62 +32,183 @@ body{
 }
 
 /* HEADER */
+
 header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:18px 22px;
+  padding:20px 24px;
 }
 
 .logo{
   font-size:22px;
-  letter-spacing:2px;
+  letter-spacing:3px;
   font-weight:600;
 }
 
 .icons{
-  font-size:22px;
+  font-size:24px;
   cursor:pointer;
-  transition:transform 0.25s ease;
+  transition:0.3s;
 }
-.icons:hover,
-.icons:active{
-  transform:scale(1.2);
+
+.icons:hover{
+  transform:scale(1.1);
 }
 
 /* HERO */
+
 .hero{
-  padding:30px 22px;
+  padding:20px 24px 40px;
 }
 
 .hero h1{
-  font-size:38px;
-  line-height:1.2;
+  font-size:42px;
+  line-height:1.1;
+  margin-bottom:18px;
 }
 
 .hero p{
-  margin:14px 0 22px;
-  color:#555;
+  color:#666;
+  line-height:1.7;
+  margin-bottom:28px;
+  max-width:500px;
+}
+
+.btn{
+  display:inline-block;
+  background:#111;
+  color:white;
+  text-decoration:none;
+  padding:14px 30px;
+  border-radius:40px;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#333;
 }
 
 .hero img{
   width:100%;
-  border-radius:22px;
-  margin-top:22px;
+  margin-top:35px;
+  border-radius:28px;
+  height:520px;
+  object-fit:cover;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
-/* BUTTON */
-.btn{
-  display:inline-block;
-  background:#111;
-  color:#fff;
-  padding:14px 28px;
+/* CATEGORIES */
+
+.categories{
+  display:flex;
+  gap:12px;
+  overflow-x:auto;
+  padding:0 24px 35px;
+}
+
+.categories::-webkit-scrollbar{
+  display:none;
+}
+
+.cat{
+  background:white;
+  padding:12px 20px;
   border-radius:30px;
-  text-decoration:none;
+  white-space:nowrap;
   font-size:14px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* (rest of your CSS same — no change needed) */
+/* PRODUCTS */
+
+.products{
+  padding:0 24px 50px;
+}
+
+.products h2{
+  font-size:30px;
+  margin-bottom:24px;
+}
+
+.product-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.product-card{
+  background:white;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 8px 22px rgba(0,0,0,0.06);
+  transition:0.3s;
+}
+
+.product-card:hover{
+  transform:translateY(-6px);
+}
+
+.product-card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+}
+
+.product-info{
+  padding:16px;
+}
+
+.product-info h3{
+  font-size:17px;
+  margin-bottom:8px;
+}
+
+.product-info p{
+  color:#777;
+  font-size:13px;
+  line-height:1.5;
+  margin-bottom:12px;
+}
+
+.price{
+  font-size:15px;
+  font-weight:600;
+}
+
+/* BANNER */
+
+.banner{
+  margin:0 24px 50px;
+  background:#111;
+  color:white;
+  padding:40px 30px;
+  border-radius:30px;
+  text-align:center;
+}
+
+.banner h2{
+  font-size:30px;
+  margin-bottom:15px;
+}
+
+.banner p{
+  color:#ddd;
+  margin-bottom:25px;
+  line-height:1.6;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:35px 20px;
+  color:#777;
+  font-size:14px;
+  border-top:1px solid #e5e5e5;
+}
+
 </style>
 </head>
 
@@ -96,11 +221,16 @@ header{
 
 <section class="hero">
   <h1>Confidence<br>Starts Underneath</h1>
-  <p>Ultra-soft, sculpting bodysuits made for everyday power dressing.</p>
+
+  <p>
+    Ultra-soft sculpting bodysuits designed for comfort,
+    confidence and everyday effortless styling.
+  </p>
+
   <a href="#" class="btn">Shop Collection</a>
 
-  <img src="https://plus.unsplash.com/premium_photo-1664885647898-55693575f759?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bodysuit">
-</section> <!-- ✅ FIXED missing closing tag -->
+  <img src="https://plus.unsplash.com/premium_photo-1664885647898-55693575f759?q=80&w=1170&auto=format&fit=crop" alt="Bodysuit">
+</section>
 
 <section class="categories">
   <div class="cat">All</div>
@@ -110,7 +240,49 @@ header{
   <div class="cat">New In</div>
 </section>
 
-<!-- rest of your code same -->
+<section class="products">
+
+  <h2>Best Sellers</h2>
+
+  <div class="product-grid">
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=987&auto=format&fit=crop" alt="">
+      
+      <div class="product-info">
+        <h3>Seamless Sculpt Bodysuit</h3>
+        <p>Buttery-soft compression fit designed to sculpt comfortably.</p>
+        <div class="price">₹2,499</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=987&auto=format&fit=crop" alt="">
+      
+      <div class="product-info">
+        <h3>Everyday Lounge Fit</h3>
+        <p>Minimal everyday essential with premium stretch fabric.</p>
+        <div class="price">₹1,899</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="banner">
+  <h2>Made To Feel Like Second Skin</h2>
+
+  <p>
+    Elegant silhouettes, breathable fabrics and confidence-driven fits
+    created for modern women.
+  </p>
+
+  <a href="#" class="btn">Explore Now</a>
+</section>
+
+<footer>
+  © 2025 UNDERNEATH — Crafted for comfort & confidence.
+</footer>
 
 </body>
 </html>
